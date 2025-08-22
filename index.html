@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Undangan Digital Daihatsu MRM Kendari</title>
+  <link href="https://fonts.googleapis.com/css?family=Poppins:700,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<audio id="bgm" src="/bgm.mp3" autoplay loop></audio>
+<script>
+      window.addEventListener('DOMContentLoaded', function() {
+          var audio = document.getElementById('bgm');
+          audio.volume = 0.16;
+          document.body.addEventListener('click', function() {
+              if(audio.paused) audio.play();
+          });
+      });
+  </script>
+
+  <!-- LOGOS -->
+  <img src="/image/LOGO1.webp" alt="Logo 1" class="logo logo-left" />
+  <img src="/image/LOGO2.jpg" alt="Logo 2" class="logo logo-right" />
+
+  <!-- MAIN CARD -->
+  <div class="card">
+    <h1>
+      <span class="icon">
+        <svg width="26" height="26" fill="none" stroke="#ed1c24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-calendar" viewBox="0 0 24 24"><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+      </span>
+      <span class="title-red">SHOWROOM EVENT</span> <span class="title-yellow">DAIHATSU</span>
+    </h1>
+    <h2>PT. Makassar Raya Motor<br>Cabang Kendari</h2>
+    <p class="invite">
+      Kami mengundang Bapak/Ibu/Sahabat Daihatsu<br>
+      untuk hadir dalam acara spesial MERAH PUTIH AGUSTUS 2025:
+    </p>
+
+    <!-- BUTTONS -->
+    <div class="btn-group">
+      <button class="btn" id="btn-lokasi">
+        <span class="icon">
+          <svg width="20" height="20" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-map-pin" viewBox="0 0 24 24"><path d="M12 21C12 21 7 14.57 7 10a5 5 0 1 1 10 0c0 4.57-5 11-5 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+        </span>
+        Lokasi
+      </button>
+      <button class="btn" id="btn-waktu">
+        <span class="icon">
+          <svg width="20" height="20" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </span>
+        Waktu & Tanggal
+      </button>
+      <button class="btn" id="btn-benefit">
+        <span class="icon">
+          <svg width="20" height="20" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-percent" viewBox="0 0 24 24"><line x1="19" x2="5" y1="5" y2="19"/><circle cx="6.5" cy="6.5" r="2.5"/><circle cx="17.5" cy="17.5" r="2.5"/></svg>
+        </span>
+        Benefit Acara
+      </button>
+      <button class="btn" id="btn-info">
+        <span class="icon">
+          <svg width="20" height="20" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" x2="12" y1="16" y2="12"/><line x1="12" x2="12" y1="8" y2="8"/></svg>
+        </span>
+        Info Acara
+      </button>
+    </div>
+
+    <p class="thanks">Dengan ini kami mengucapkan terima kasih atas kesediaan Bapak/Ibu/Sahabat DAIHATSU untuk hadir dalam acara ini.</p>
+    <div class="watermark">MRM Kendari MERDEKA</div>
+  </div>
+
+  <!-- MODALS -->
+  <!-- LOKASI MODAL -->
+  <div id="modal-lokasi" class="modal">
+    <div class="modal-content">
+      <h3>📍 Lokasi Acara</h3>
+      <p>
+        <b>KEDAI UNIVERSE</b><br>
+        Jl. Maartandu, Kambu, Kendari
+      </p>
+      <div class="map-embed">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3980.0744158941147!2d122.53162497584661!3d-4.005124344644243!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2d988db64b6abf31%3A0xf26c27ee02a2dd07!2sWarkop%20Universe!5e0!3m2!1sid!2sid!4v1755835096061!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+      <a href="https://maps.app.goo.gl/BhyLVMMUUoByBsTc8" target="_blank" class="link-maps">Buka di Google Maps</a>
+      <span class="close">&times;</span>
+    </div>
+  </div>
+  <!-- WAKTU MODAL -->
+  <div id="modal-waktu" class="modal">
+    <div class="modal-content">
+      <h3>⏰ Waktu & Tanggal</h3>
+      <p>
+        Sabtu, 23 Agudtus 2025<br>
+        Pukul 16:30 WITA - Selesai
+      </p>
+      <div id="countdown-modal" class="countdown-modal"></div>
+      <span class="close">&times;</span>
+    </div>
+  </div>
+  <!-- BENEFIT MODAL -->
+  <div id="modal-benefit" class="modal">
+    <div class="modal-content">
+      <h3>🎁 Benefit Acara</h3>
+      <ul class="benefit-list">
+        <li><b>Promo & Diskon:</b> DP mulai 15%, angsuran ringan, promo service berkala</li>
+        <li><b>Doorprize:</b> Hadiah menarik untuk peserta yang hadir</li>
+        <li><b>Makanan & Minuman:</b> Gratis untuk tamu undangan</li>
+      </ul>
+      <span class="close">&times;</span>
+    </div>
+  </div>
+  <!-- INFO MODAL -->
+  <div id="modal-info" class="modal">
+    <div class="modal-content">
+      <h3>ℹ️ Info Acara</h3>
+      <ul class="info-list">
+        <li>Hadir tepat waktu</li>
+        <li>Pakaian bebas rapi</li>
+        <li>Acara seru dan suasana ceria</li>
+      </ul>
+      <span class="close">&times;</span>
+    </div>
+  </div>
+
+  <!-- SURVEY SECTION -->
+  <div class="survey">
+    <h4>Survey Kepuasan & Pesan/Kesan</h4>
+    <form id="surveyForm">
+      <label>Bagaimana kesan Anda terhadap acara ini?</label>
+      <select name="kepuasan" required>
+        <option value="">Pilih...</option>
+        <option value="Sangat Puas">Sangat Puas</option>
+        <option value="Puas">Puas</option>
+        <option value="Cukup Puas">Cukup Puas</option>
+        <option value="Kurang Puas">Kurang Puas</option>
+      </select>
+      <label>Pesan atau Kesan:</label>
+      <textarea name="pesan" rows="2" placeholder="Tulis pesan/masukan Anda di sini..." required></textarea>
+      <button type="submit" class="btn-survey">Kirim ke WhatsApp</button>
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
